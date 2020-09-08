@@ -19,6 +19,8 @@ Pour les authentifiants, utilisez une variable d'environnement nommée `GOOGLE_C
 
 Pour la section sur les [changements de variables](https://learn.hashicorp.com/tutorials/terraform/cloud-change#changing-variables), vous pouvez changer la [zone](https://cloud.google.com/compute/docs/regions-zones?hl=fr)
 
+Pour la section sur les [changements de configuration](https://learn.hashicorp.com/tutorials/terraform/cloud-change#changing-configuration), vous pouvez faire le pull request à partir de la branche [networking](https://github.com/matbilodeau/A2020-CR460-terraform-cloud/tree/networking). Ceci créera une ressource de type réseau dans votre projet GCP.
+
 ## Ça me donne toujours des erreurs!
 TLDR: Ouvrez la console développeur de votre navigateur
     `console.log(JSON.stringify(collez_le_contenu_JSON_ici))`  puis copiez/collez le résultat dans la variable.
