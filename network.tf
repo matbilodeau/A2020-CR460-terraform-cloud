@@ -1,4 +1,4 @@
-resource "google_compute_network" "reseau_demo" {
-  name                    = "reseau_demo"
+resource "google_compute_network" "reseaudemo" {
+  name                    = "reseaudemo"
   auto_create_subnetworks = "true"
 }
