@@ -61,10 +61,6 @@ jobs:
         shell: bash
 
     steps:
-    - name: Set GCP environment
-      id: set_gcp_env
-      run: echo ::set-env name=BRANCH_NAME::$(echo ${GITHUB_BASE_REF#refs/heads/})
-
     - name: configure gcloud
       id: config_gcloud
       uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
@@ -80,11 +76,6 @@ jobs:
     - name: set GCP project
       id: config_project
       run: gcloud config set project a2020-cr460
-
-    - name: "Decrypt key service account"
-      id: decrypt_SA
-      run: gcloud secrets versions access latest --secret=test-terraform-key --project="a2020-cr460" 
-      working-directory: "environments/${{ env.BRANCH_NAME }}"
 
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
     - name: Setup Terraform
