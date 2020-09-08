@@ -89,12 +89,6 @@ jobs:
       env:
         GCP_SA_KEY: ${{ secrets.GCP_SA_KEY}}
     
-    # Checks that all Terraform configuration files adhere to a canonical format
-    - name: Terraform Format
-      run: terraform fmt -check
-      env:
-        GCP_SA_KEY: ${{ secrets.GCP_SA_KEY}}
-    
     # Generates an execution plan for Terraform
     - name: Terraform Plan
       run: terraform plan
