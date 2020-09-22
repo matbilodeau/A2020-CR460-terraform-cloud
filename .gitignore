@@ -5,6 +5,9 @@
 *.tfstate
 *.tfstate.*
 
+#credentials for gcp
+*.json
+
 # Crash log files
 crash.log
 
